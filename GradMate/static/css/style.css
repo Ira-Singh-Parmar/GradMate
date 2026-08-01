@@ -2,85 +2,164 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #f9fafb;
     margin: 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
+
 .chat-container {
-    width: 400px;
-    max-width: 90vw;
+    width: 90vw;
+    max-width: 1000px;
+    height: 90vh;
     background: white;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    border-radius: 10px;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    border-radius: 15px;
+
     display: flex;
     flex-direction: column;
-    height: 600px;
+
     padding: 20px;
 }
+
 
 .chat-box {
     flex-grow: 1;
     overflow-y: auto;
-    padding-right: 10px;
-    margin-bottom: 10px;
+    overflow-x: hidden;
+
+    padding: 15px;
+
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
+
 .message {
-    max-width: 70%;
-    padding: 10px 15px;
-    border-radius: 20px;
+    padding: 12px 18px;
+    border-radius: 15px;
+
     font-size: 1rem;
-    line-height: 1.4;
+    line-height: 1.5;
+
     word-wrap: break-word;
 }
+
 
 .bot-message {
     background-color: #e8f0fe;
     color: #1a1a1a;
+
     align-self: flex-start;
-    border-bottom-left-radius: 0;
+
+    max-width: 95%;
 }
+
 
 .user-message {
     background-color: #3a86ff;
     color: white;
+
     align-self: flex-end;
-    border-bottom-right-radius: 0;
+
+    max-width: 70%;
 }
 
-form {
-    display: flex;
-    gap: 10px;
+
+/* TABLE DESIGN */
+
+.colleges-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    margin-top: 10px;
+
+    font-size: 14px;
 }
 
-input[type="text"] {
-    flex-grow: 1;
-    padding: 10px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-input[type="text"]:focus {
-    border-color: #3a86ff;
-}
 
-button {
+.colleges-table th {
+
     background-color: #3a86ff;
     color: white;
-    border: none;
-    padding: 0 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
+
+    padding: 10px;
+
+    text-align: left;
 }
+
+
+.colleges-table td {
+
+    padding: 10px;
+
+    border-bottom: 1px solid #006699;
+}
+
+
+.colleges-table tr:hover {
+
+    background-color: #f1f5ff;
+
+}
+
+
+/* Table responsive wrapper */
+
+.table-container {
+
+    overflow-x: auto;
+    width: 100%;
+}
+
+
+
+form {
+
+    display: flex;
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+
+input[type="text"] {
+
+    flex-grow: 1;
+
+    padding: 12px;
+
+    border-radius: 25px;
+
+    border: 1px solid #ccc;
+
+    font-size: 1rem;
+
+}
+
+
+button {
+
+    background-color: #3a86ff;
+
+    color:white;
+
+    border:none;
+
+    padding: 0 25px;
+
+    border-radius:25px;
+
+    cursor:pointer;
+
+}
+
+
 button:hover {
-    background-color: #265dcc;
+
+    background-color:#265dcc;
+
 }
