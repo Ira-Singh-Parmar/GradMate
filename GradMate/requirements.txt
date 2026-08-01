@@ -1,3 +1,5 @@
 openpyxl
 pandas
 flask
+matplotlib
+sqlite3

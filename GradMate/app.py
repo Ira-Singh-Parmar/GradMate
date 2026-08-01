@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request, jsonify
 import sqlite3
 import pandas as pd
-import matplotlib.pyplot as plt
 import os
+
 
 app = Flask(__name__)
 
@@ -85,3 +85,6 @@ def chat():
             bot_msg = "Sorry, I couldn't find any college matching your query. Try again!"
 
     return jsonify({"reply": bot_msg})
+
+if __name__ == "__main__":
+    app.run(debug=True)
